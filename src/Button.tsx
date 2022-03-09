@@ -4,7 +4,7 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
     children?: ReactNode,
     color?: 'primary' | 'secondary' | 'error' | 'success'|'warning'
     disabled?: boolean,
-    variant?: 'normal' | 'rounded' | 'circle' | 'outline'    
+    variant?: 'normal' | 'rounded' | 'circle',   
     iconLeft?: string,
     iconRight?: string,
     icon?: string,
@@ -29,53 +29,48 @@ switch(size){
 let btnColor;
 switch(color){
     case 'primary':
-        btnColor={color:`blue`};
+        btnColor={background:`bg-blue-600`, hover:'bg-blue-700'};
         break;
     case 'success':
-        btnColor={color:`green`};
+        btnColor={background:`bg-green-600`, hover:'bg-green-700'};
         break;
     case 'warning':
-        btnColor={color:`amber`};
+        btnColor={background:`bg-amber-600`, hover:'bg-amber-700'};
         break;
     case 'error':
-        btnColor={color:`red`};
+        btnColor={background:`bg-red-600`, hover:'bg-red-700'};
         break;
     case 'secondary':
-        btnColor={color:`blue`};
+        btnColor={background:`bg-blue-600`, hover:'bg-blue-700'};
         break;
 }
 // HOVER STYLE
-    let btnHover = `hover:bg-${btnColor.color}-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${btnColor.color}-500`
+    let btnHover = `hover:${btnColor.hover} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`
     // BUTTON VARIANT
     let btnVariant;
     switch(variant){
         case 'normal':
             btnVariant=`inline-flex items-center border border-transparent text-sm rounded-md shadow-sm 
             ${buttonSize.y} ${buttonSize.x}  text-${buttonSize.text}
-            bg-${btnColor.color}-600 font-medium text-white 
+            ${btnColor.background} font-medium text-white 
              
             `;
             break;
         case 'rounded':
             btnVariant=`inline-flex items-center border border-transparent text-sm rounded-full shadow-sm 
             ${buttonSize.y} ${buttonSize.x} text-${buttonSize.text}
-            bg-${btnColor.color}-600 font-medium text-white 
+            ${btnColor.background} font-medium text-white 
              
             `;
             break;
         case 'circle':
             btnVariant=`inline-flex items-center border border-transparent text-sm rounded-full shadow-sm 
               ${buttonSize.origin} text-${buttonSize.text}
-            bg-${btnColor.color}-600 font-medium text-white 
+            ${btnColor.background} font-medium text-white 
              
             `;
             break;
-        case 'outline':
-            btnVariant=`inline-flex items-center border border-${btnColor.color}-300 text-sm rounded-md shadow-sm bg-transparent text-${btnColor.color}-600 font-medium
-            ${buttonSize.y} ${buttonSize.x} text-${buttonSize.text}
-             
-            `;
-            break;
+       
     }
     
 

@@ -61,10 +61,4 @@ Disabled.args = {
     disabled:true
 
 }
-export const Outline = Template.bind({})
-Outline.args = {
-    variant: 'outline',
-    color: 'error',
-    children: 'Click Me',
-
-}
+ 
