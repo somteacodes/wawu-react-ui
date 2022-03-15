@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, Story } from '@storybook/react';
-import { Button, Props } from '../src/Button';
+import { Button, Props } from '../src/Button/Button';
 
 const meta: Meta = {
     title: 'Button',
@@ -19,7 +19,7 @@ Default.args = {
     variant: 'normal',
     children: 'Click Me',
     color: 'primary', 
-    size: 'large'
+    size: 'md'
 }
 
 // export const Secondary = Template.bind({})
@@ -35,7 +35,7 @@ Error.args = {
     variant: 'normal',
     color: 'error',
     children: 'Click Me',
-    
+    size: 'md'
 
 }
 
@@ -44,21 +44,21 @@ Warning.args = {
     variant: 'normal',
     color: 'warning',
     children: 'Click Me',
-
+    size: 'md'
 }
 export const Success = Template.bind({})
 Success.args = {
     variant: 'normal',
     color: 'success',
     children: 'Click Me',
-
+    size: 'md'
 }
 export const Disabled = Template.bind({})
 Disabled.args = {
     variant: 'normal',
     color: 'primary',
     children: 'Click Me',
-    disabled:true
-
+    disabled:true,
+    size: 'md'
 }
  
