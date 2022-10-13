@@ -1,6 +1,6 @@
 import React, { FC, HTMLAttributes, MouseEventHandler, ReactNode } from "react";
 import { BackgroundColor, ButtonSize, Rounded, TextColor } from "./ButtonTheme";
-
+ 
 export interface ButtonType extends HTMLAttributes<HTMLButtonElement> {
   children?: ReactNode;
   color: "primary" | "secondary" | "white" | "dark" | "alternate";

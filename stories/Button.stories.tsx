@@ -1,6 +1,7 @@
-import Button, { ButtonType } from "../components/Button/Button";
+import Button, { ButtonType } from "../src/components/Button/Button";
 import { Story } from "@storybook/react";
-// import '../main.css'
+import React from "react";
+ 
 export default {
   title: "Button",
   component: Button,
